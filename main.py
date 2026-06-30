@@ -15,7 +15,9 @@ def index():
 @app.route('/', methods=['POST'])
 def process_form():
     button_python = request.form.get('button_python')
-    return render_template('index.html', button_python=button_python)
+    button_telega = request.form.get('button_telegram')
+    button_html = request.form.get('button_html')
+    return render_template('index.html', button_python=button_python, button_telega=button_telega, button_html=button_html)
 
 
 if __name__ == "__main__":
